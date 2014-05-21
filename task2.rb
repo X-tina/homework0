@@ -2,7 +2,8 @@
 # and returns the string "Hello, "
 # concatenated with the name.
 def hello(name)
-  raise "Not yet implemented"
+  #raise "Not yet implemented"
+  puts "Hello, " + name
 end
 
 # Takes a string
