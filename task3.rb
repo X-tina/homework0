@@ -26,14 +26,7 @@ class BookInStock
   end  
 
   def price_as_string
-    "$#{@price.to_s}"
-  end
-
-  def price_is_float?
-    @price.class == Float
-  end
-
-  def isbn_string?
-    @isbn.class == String
-  end
+    price_2f = '%.2f' % @price
+    "$#{price_2f}"
+  end  
 end

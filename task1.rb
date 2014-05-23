@@ -25,18 +25,19 @@ end
 # if any two elements in the array of integers sum to n.
 # An empty array should sum to zero by definition.
 def sum_to_n?(array, n)
-  def recurs(array, n)
-    if (n < 0) summ
-    elsif (array.empty?) sum += 1
-      if (n == 0) summ += 1
-      else summ
-      end
-    else recurs(т)
+  array_couple = []
+  if (array.empty?)
+    return 0
+    puts "!!!!"
+  else puts "*****"
+  0.upto(array.size - 2) do |i|
+    (i + 1).upto(array.size - 1) do |j|
+     equal?(array[i], array[j], n)
+    end
   end
-
-  #raise "Not yet implemented"
+  end
 end
 
-
-
-
+def equal?(elem_1, elem_2, value)
+  (elem_1 + elem_2 == value)
+end
