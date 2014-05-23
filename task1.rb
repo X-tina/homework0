@@ -18,6 +18,7 @@ def max_2_sum(array)
     end 
   sum(array_new)
 end
+
 # DIFFICULT
 # Takes an array of integers
 # and an additional integer, n, as arguments
