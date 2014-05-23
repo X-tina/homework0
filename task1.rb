@@ -26,19 +26,29 @@ end
 # if any two elements in the array of integers sum to n.
 # An empty array should sum to zero by definition.
 def sum_to_n?(array, n)
-  array_couple = []
   if (array.empty?)
-    return 0
-    puts "!!!!"
-  else puts "*****"
-  0.upto(array.size - 2) do |i|
-    (i + 1).upto(array.size - 1) do |j|
-     equal?(array[i], array[j], n)
+    if (n == 0)
+      true
+    else 
+      false
     end
-  end
+  elsif (array.size == 1)
+    (array.first == n)
+  else equal_sum(array, n)
   end
 end
 
-def equal?(elem_1, elem_2, value)
-  (elem_1 + elem_2 == value)
+def equal_sum(array, n)
+  array_new = []
+  0.upto(array.size - 2) do |i|
+    (i + 1).upto(array.size - 1) do |j|
+      array_new << array[i] << array[j]
+      break if (equal?(array_new, n)) == true
+     #return (equal?(array[i], array[j], n)) if true
+    end
+  end
+end
+
+def equal?(array, value)
+  sum(array) == value
 end
