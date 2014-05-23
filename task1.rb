@@ -43,10 +43,13 @@ def equal_sum(array, n)
   0.upto(array.size - 2) do |i|
     (i + 1).upto(array.size - 1) do |j|
       array_new << array[i] << array[j]
-      break if (equal?(array_new, n)) == true
-     #return (equal?(array[i], array[j], n)) if true
+      if (equal?(array_new, n))
+        return true
+      end
+      array_new = []
     end
   end
+  return false
 end
 
 def equal?(array, value)
